@@ -1,0 +1,40 @@
+ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+}
+ul li{
+    list-style: none;
+    width: 6px;
+    height: 20px;
+    background: #201f1f;
+    margin: 0 5px;
+    animation: animate .7s infinite alternate;
+    /* animate- names for keyframe to have control over animation display when styles are loaded,infinite - animation repeats forever,The animation cycle 
+    iterations that are odd counts are played in the normal direction, and the animation cycle iterations 
+    that are even counts are played in a reverse direction. */
+}
+@keyframes animate {
+    0%{
+        transform: scaleY(1);
+    }
+    25%{ 
+        transform: scaleY(1); 
+      } 
+       50%{ 
+        transform: scaleY(1); 
+      } 
+       75%{ 
+        transform: scaleY(1); 
+      } 
+       100%{ 
+        transform: scaleY(3); 
+      } 
+}
+ul li:nth-child(even){
+    animation-delay: .1s;
+}
+ul li:nth-child(odd){
+    animation-delay: .3s;
+}
